@@ -154,7 +154,7 @@
             myModal.show();
         }
     })
-
+    //prepinanie medzi textom a inputom
     modalEl.addEventListener("click", function (e){
         if(e.target.getAttribute("id") == "image-modal-title") {
             if (titleInputEl) {
@@ -177,6 +177,7 @@
             console.log(response)
         }
     })
+    //pri odkliknuti prec zmizne input a objavi sa text
     modalEl.addEventListener("focusout", function (e){
         if(e.target.getAttribute("id") == "image-modal-title-input") {
             titleEl.classList.remove("hidden");

@@ -250,7 +250,6 @@ header a:hover {
 }
 .blog-text .blog-delete {
     padding:0.1em;
-    /*border:1px solid black;*/
     position:absolute;
     right:20px;
     cursor:pointer;
