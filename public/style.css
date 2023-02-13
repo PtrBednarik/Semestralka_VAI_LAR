@@ -316,7 +316,6 @@ header a:hover {
     position:absolute;
     right:60px;
     cursor:pointer;
-    /*background-color: green;*/
 }
 .fa-edit:hover {
     background-color: lightblue;
@@ -328,7 +327,6 @@ header a:hover {
     position:absolute;
     right:20px;
     cursor:pointer;
-    /*background-color: red;*/
 }
 /*-------------------------------CREATE_PAGE--------------------------------*/
 .create-container {
