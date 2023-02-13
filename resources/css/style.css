@@ -1,0 +1,667 @@
+* {
+    /*outline: solid red 1px;*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 23px;
+    color: #000;
+    transition-duration: 0.3s;
+}
+header {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top : 0;
+    z-index: 1000;  /*Priorita*/
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    background-color: #256D85;
+    padding: 20px;
+    flex-grow: 1;
+}
+.menu li{
+    display: inline-flex;
+    padding: 3px;
+    margin: 3px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+header a:hover {
+    color: #a2c3d9;
+}
+.logo {
+    /*display: block;*/
+    left: 25px;
+    display: flex;
+    position: fixed;
+}
+.logo-img {
+    max-inline-size: 40px;
+    display: block;
+    width: 100%;
+}
+.navigation-Mob {
+    display: none;
+}
+.hamburger-icon {
+    display: none;
+}
+
+/*MOBILNE MENU*/
+@media screen and (max-width: 800px) {
+    .header {
+        padding: 50px 20px;
+        height: 50px;
+    }
+    .menu {
+        height: 65px;
+    }
+    /*toto sa meni z block na none*/
+    .navigation-Mob {
+        display: block;
+    }
+    /*display none zobrazuje/schovava bocne menu*/
+    .menu-Mob {
+        display: none;
+        text-decoration: none;
+        justify-content: center;
+        /*flex-direction: column;*/
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #256d85;
+        width: 150px;
+        height: 14.5rem;
+        padding-top: 60px;
+        padding-right: 30px;
+        padding-left: 30px;
+        list-style-type: none;
+    }
+
+    .menu li {
+        width: 100%;
+        /*Tu miznu moznosti velkeho screenu*/
+        display: none;
+        list-style-type: none;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+    /*Check-box*/
+    .toggle-menu {
+        /*display: none;*/
+        display: flex !important;
+        height: 50px;
+        width: 23px;
+        right: 23px;
+        position: absolute;
+        z-index: 2;
+        /*opacity: 0;*/
+    }
+
+    .hamburger-icon {
+        display: flex !important;
+        height: 30px;
+        right: 20px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .iksko-icon {
+        position: absolute;
+        top: 20px;
+        height: 30px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .column-gallery {
+        width: 100% !important;
+    }
+
+    .blog-box {
+        width: 90% !important;
+    }
+
+    .main-title {
+        font-size: 5rem !important;
+    }
+}
+/*--------------------Titulok na kazdej stranke--------------------*/
+.title {
+    text-align: center;
+    font-size: 70px;
+    padding-top: 50px;
+    margin: 5%;
+}
+.login_title {
+    color: #eb6d3f;
+}
+.logout-title {
+    margin-left: 210px;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #256D85;
+    margin-top: -30px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #eb6d3f;
+    width: 0%;
+}
+/*-------------------------------MAIN_PAGE--------------------------------*/
+.title-container {
+    height: 40vh !important;
+    background: rgba(26,26,26,0.60) url("Images/forest_bcgrnd.jpg");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.title-container h3 {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 18vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    color: white;
+    /*font-family: 'Alex Brush';*/
+}
+.main-title {
+    text-align: center;
+    /*font-size: 60px;*/
+    font-size: 18vh;
+    padding-top: 45vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    color: white;
+    font-family: 'Moon Dance', cursive;
+}
+.home-bckgrnd {
+    height: 100vh !important;
+    background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url("Images/Janov_klavir.JPG");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+    /*filter: brightness(50%) ;*/
+}
+/*-------------------------------NEWS_PAGE--------------------------------*/
+.btn {
+    font-size: 30px;
+    border-radius: 10px;
+    height: 60px;
+    width:50%;
+}
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+.blog-box {
+    width: 70%;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.blog-img {
+    width: 100%;
+    height: auto;
+}
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.blog-text span {
+    color: #eb6d3f;
+    font-size: 0.9rem;
+}
+.blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #256D85;
+}
+.blog-text .blog-text:hover {
+    color: green;
+    transition: all ease 0.3s;
+}
+.blog-text p{
+    color: grey;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text a{
+    color: black;
+}
+.blog-text a:hover {
+    color: #eb6d3f;
+    transition: all ease 0.3s;
+}
+/*-------------------------------CREATE_PAGE--------------------------------*/
+.create-container {
+    padding: 3vw;
+}
+.create-div {
+    background-color: #fafafa;
+}
+
+.create-button {
+    margin: 20px;
+    box-shadow: none;
+    border: 1px #eb6d3f solid;
+    background-color: #eb6d3f;
+}
+/*-------------------------------VIEW_PAGE--------------------------------*/
+.section-view {
+    background-color: #fafafa;
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /*text-align: justify;*/
+}
+.back-link {
+    text-decoration: none;
+    color: #eb6d3f;
+}
+.view-buttons {
+    display: flex;
+}
+.view-buttons form button {
+    margin-left: 1rem;
+}
+.view-buttons a,
+.view-buttons form button {
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    width: 7rem;
+}
+/*-------------------------------ABOUT_PAGE--------------------------------*/
+.about-div {
+    display: flex;
+    margin: 2%;
+    padding: 5px 4px;
+    grid-template-columns: repeat(2,1fr);
+}
+.about-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /*outline: solid #256D85;*/
+}
+.about-text-h3 {
+    text-align: center;
+}
+.about-text {
+    /*padding-top: 50px;*/
+    margin: 5%;
+}
+.fotka-zbor {
+    position: center;
+    max-width: 100%;
+    margin: 5%;
+    padding: 5%;
+}
+@media (max-width: 1100px) {
+    /*.blog-box {*/
+    /*    width: 300px;*/
+    /*}*/
+    .about-div {
+        display: block;
+    }
+    .about-container {
+        width: 100%;
+}
+}
+/*-------------------------------CONTACT_PAGE--------------------------------*/
+.contact-div {
+    margin: 10px;
+    padding: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.contact-div h5{
+    color: #eb6d3f;
+}
+#map {
+    height: 600px;
+    width: 100%;
+    margin: 2%;
+}
+
+/*-------------------------------HISTORY_PAGE--------------------------------*/
+
+/*the vertical ruler*/
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #256D85;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container okolo obsahu*/
+.history-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+    border-radius: 10px;
+    /*outline: solid #256D85;*/
+}
+
+/* orazove kruzky*/
+.history-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    background-color: white;
+    border: 4px solid #eb6d3f;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Tie vlavo */
+.left {
+    left: 0;
+}
+
+/* Tie vpravo */
+.right {
+    left: 50.3%;
+}
+
+.right::after {
+    left: -16px;
+}
+
+/* obsah */
+.content {
+    padding: 20px 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+.podnadpis {
+    color: #eb6d3f;
+}
+@media screen and (max-width: 600px) {
+    /* timelime nalavo */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Containery v plnej sirke */
+    .history-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .history-container::before {
+        left: 60px;
+        border-width: 10px 10px 10px 0;
+    }
+
+    .left::after, .right::after {
+        left: 17px;
+    }
+
+    .right {
+        left: 0.5%;
+    }
+}
+#toTopBtn {
+    opacity: 0.6;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #eb6d3f;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#toTopBtn:hover {
+    background-color: #256D85;
+}
+/*-------------------------------GALLERY_PAGE--------------------------------*/
+
+.gallery-menu {
+    background-color: coral;
+    text-align: center;
+}
+.gallery-menu ul {
+    width: 100%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.gallery-menu ul li {
+    display: inline-flex;
+    margin: 0px -3px;
+    align-items: center;
+}
+.gallery-menu ul li a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: black;
+}
+.gallery-menu ul li a:hover {
+    background-color: #eb6d3f;
+}
+/*-------------------------*/
+.row-gallery {
+    content: "";
+    display: table;
+    clear: both;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.column-gallery {
+    float: left;
+    width: 25%;
+    padding: 15px;
+}
+.column-gallery img {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.column-gallery img:hover {
+    opacity: 1;
+}
+
+
+.row {
+    display: flex;
+    /*text-align: center;*/
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*-------------------------------LOGIN--------------------------------------*/
+.login_section {
+    position: absolute;
+    background-color: grey;
+    width: 17rem;
+    height: 22rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.login_section input {
+    margin: 0.7rem auto;
+    padding: 0.3rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px white solid;
+    box-shadow: none;
+}
+.login_button {
+    padding: 0.5rem;
+    margin: 1.1rem auto;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px white solid;
+    text-transform: uppercase;
+}
+.login_button:hover {
+    background-color: #eb6d3f;
+    border: 1px #eb6d3f solid;
+}
+#error {
+    color: red;
+}
+.error-span {
+    display: block;
+    margin-left: 20px;
+    color: red;
+    font-style: italic;
+}
+/*-------------------------------REGISTRATION--------------------------------------*/
+.registration-container {
+    margin-top: 7%;
+    padding: 8%;
+    padding-left: 15%;
+    padding-right: 15%;
+    align-items: center;
+}
+.registration-container h1{
+    text-align: center;
+}
+
+.input-reg[type=text], .input-reg[type=password], .input-reg[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    margin: 5px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 15px;
+}
+
+.input-reg[type=text]:focus, .input-reg[type=password]:focus, .input-reg[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+    border-radius: 15px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.regbtn {
+    background-color: #f1f1f1;
+    position: relative;
+    color: black;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+.regbtn:hover {
+    background-color: #eb6d3f;
+    opacity: 1;
+}
+
+a {
+    color: #eb6d3f;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.showPasswd {
+    font-size: 15px;
+}
+/*-------------------------------FOOTER--------------------------------------*/
+.footer{
+    /*position: relative;*/
+    bottom: 0;
+    width: 100%;
+    height: 2.8rem;
+    text-align: center;
+    padding: 5px 5px;
+    background-color: #256D85;
+}
+.footer p {
+    margin: 0;
+}
+.footer-text{
+    color: antiquewhite;
+    font-size: 17px;
+}
+.author {
+    font-size: 10px;
+}
+.showP {
+    width: 100%;
+    margin: 5px;
+    text-align: right;
+}
+.showPasswd input {
+    margin-left: 7px;
+}
