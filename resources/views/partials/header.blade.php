@@ -3,7 +3,6 @@
 <head>
     <title>Nebeský šramot</title>
     <meta charset="UTF-8">
-<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 <!------------------------------------------BOOTSTRAP------------------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +58,6 @@
             @endcan
 
             <li class="current-user-wrapper"><a class="login_title" href="/logout">Odhlásiť</a> <span class="current-user">({{auth()->user()->username}})</span></li>
-{{--            <li><a href="/users">Uzivatelia</a></li>--}}
             @endauth
 
             @guest
@@ -70,7 +68,7 @@
         </ul>
     </nav>
 
-            <!--Progress bar Script-->
+            <!--Progress bar-->
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>
