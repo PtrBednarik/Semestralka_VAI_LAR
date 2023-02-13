@@ -196,14 +196,11 @@
         </div>
     </section>
 </div>
-
 {{---------------------------------------------------------------------------------------------------------------------------------------------------}}
-
 <div class="modal fade" id="exampleModalPosts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-{{--                                <a class="back-link" href="/articles">&larrhk; Späť</a>--}}
                 <h1 class="h3 text-center">Pridať príspevok</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -255,7 +252,6 @@
             document.getElementById("post_title").value = "";
             document.getElementById("post_text").value = "";
         }
-
         //reset validacnych chyb
         exampleModal.querySelectorAll(`.inputError`).forEach(el=>{
             el.textContent= "";

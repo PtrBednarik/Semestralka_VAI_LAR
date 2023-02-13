@@ -67,9 +67,9 @@
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data) // body data type must match "Content-Type" header
+            body: JSON.stringify(data) // body typ sedi s "Content-Type" header
         });
-        return response.json(); // parses JSON response into native JavaScript objects
+        return response.json(); // naseka JSON response
     }
 
     async function editArticle(id, data){
@@ -79,9 +79,9 @@
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data) // body data type must match "Content-Type" header
+                body: JSON.stringify(data)
             });
-            return response.json(); // parses JSON response into native JavaScript objects
+            return response.json();
 
     }
 
@@ -92,7 +92,7 @@
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             },
         });
-        return response.json(); // parses JSON response into native JavaScript objects
+        return response.json();
     }
 
     function buttonClickHandlers(){
@@ -160,7 +160,6 @@
                 console.log(err)
                 setLoading(false)
             }
-
         });
 
         //mazanie clanku
@@ -216,7 +215,6 @@
     </section>
 </div>
 {{---------------------------------------------------------------------------------------------------------------------------------------------------}}
-
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -272,12 +270,10 @@
             document.getElementById("article_title").value = "";
             document.getElementById("article_text").value = "";
         }
-
-        //reset validacnych chyb
+        //reset validacnych chyb, aby sa schovali
         exampleModal.querySelectorAll(`.inputError`).forEach(el=>{
             el.textContent= "";
         })
-
     })
 </script>
 

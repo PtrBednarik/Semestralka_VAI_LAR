@@ -29,7 +29,6 @@ class GalleryController extends Controller
         return view('gallery')->with("images", $images);
     }
 
-
     public function patch(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
